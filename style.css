@@ -1,0 +1,19 @@
+.tile {
+  border: black solid 1px;
+  padding: 1rem;
+}
+
+.hoverTile {
+  background-color: black;
+}
+
+.gridContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  
+}
+
+.rowContainer {
+  display: flex;
+}
