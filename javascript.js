@@ -3,7 +3,9 @@ hoverEffect();
 const btn = document.querySelector('#changeGridSize');
 btn.addEventListener('click', () => {
   let gridSize = prompt('Enter desired grid size');
+  deleteGrid();
   generateGrid(gridSize, gridSize);
+  hoverEffect();
 });
 
 
@@ -24,13 +26,26 @@ function generateGrid(width, height) {
 
 function hoverEffect() {
   const tiles = document.querySelectorAll('.tile');
-  console.log(tiles);
   tiles.forEach((tile) => {
     tile.addEventListener('mouseover', () => {
       tile.classList.add('hoverTile');
     });
   });
   }
+
+function deleteGrid() {
+  // const gridContainer = document.querySelector('.gridContainer');
+  const tiles = document.querySelectorAll('.tile');
+  const rows = document.querySelectorAll('.rowContainer');
+  const gridContainer = document.querySelector('.gridContainer');
+  console.log(gridContainer);
+  tiles.forEach((tile) => {
+    tile.remove();
+  });
+  rows.forEach((row) => {
+    row.remove();
+  })
+}
 
 
 
